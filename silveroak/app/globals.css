@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0a1628;
+  --navy-light: #112240;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --cream: #f8f5f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
+  color: #0a1628;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
+
+/* Gold gradient text */
+.gold-text {
+  background: linear-gradient(135deg, #c9a84c, #e8c97a, #c9a84c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Luxury card hover */
+.luxury-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.luxury-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Auto-expand textarea */
+textarea {
+  resize: none;
+  overflow: hidden;
+  min-height: 80px;
+}
